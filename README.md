@@ -1,7 +1,5 @@
-This is the contrib directory to be used with FoA Drupal 7.15 sites.
+This is the custom modules directory to be used with FoA Drupal sites. It
+is usually automatically included via drush-make and you should not need to
+add it to your installation manually.
 
-This directory should be used to place downloaded and custom modules
-and themes which are common to all sites. Keeping contributed and
-custom modules and themes in the sites directory will aid in upgrading
-Drupal core files. Place contributed and custom modules and themes in
-the sites/all/modules and sites/all/themes directories respectively.
+TODO: Split each module out into its own git project.
