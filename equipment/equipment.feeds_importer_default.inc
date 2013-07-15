@@ -23,6 +23,7 @@ function equipment_feeds_importer_default() {
         'auto_detect_feeds' => FALSE,
         'use_pubsubhubbub' => FALSE,
         'designated_hub' => '',
+        'request_timeout' => NULL,
       ),
     ),
     'parser' => array(
@@ -40,6 +41,7 @@ function equipment_feeds_importer_default() {
           'xpathparser:8' => 'ResourceLink',
           'xpathparser:9' => 'Promoted',
           'xpathparser:10' => 'Sticky',
+          'xpathparser:11' => 'Status',
         ),
         'rawXML' => array(
           'xpathparser:3' => 'xpathparser:3',
@@ -53,6 +55,7 @@ function equipment_feeds_importer_default() {
           'xpathparser:8' => 0,
           'xpathparser:9' => 0,
           'xpathparser:10' => 0,
+          'xpathparser:11' => 0,
         ),
         'context' => '//node',
         'exp' => array(
@@ -70,6 +73,7 @@ function equipment_feeds_importer_default() {
             'xpathparser:8' => 0,
             'xpathparser:9' => 0,
             'xpathparser:10' => 0,
+            'xpathparser:11' => 0,
           ),
         ),
         'allow_override' => 1,
@@ -78,7 +82,7 @@ function equipment_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
-        'content_type' => 'equipment',
+        'bundle' => 'equipment',
         'expire' => '-1',
         'author' => '1',
         'mappings' => array(
@@ -137,9 +141,16 @@ function equipment_feeds_importer_default() {
             'target' => 'sticky',
             'unique' => FALSE,
           ),
+          11 => array(
+            'source' => 'xpathparser:11',
+            'target' => 'status',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
-        'input_format' => 'html_editor',
+        'input_format' => 'filtered_html',
+        'authorize' => 1,
+        'skip_hash_check' => 0,
       ),
     ),
     'content_type' => '',
