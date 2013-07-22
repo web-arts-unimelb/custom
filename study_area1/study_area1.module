@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Study Area feature.
+ */
+
+include_once 'study_area1.features.inc';
