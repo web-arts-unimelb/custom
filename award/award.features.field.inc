@@ -20,6 +20,9 @@ function award_field_default_fields() {
         0 => 'node',
       ),
       'field_name' => 'body',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -28,6 +31,7 @@ function award_field_default_fields() {
           'table' => 'filter_format',
         ),
       ),
+      'global_block_settings' => '1',
       'indexes' => array(
         'format' => array(
           0 => 'format',
@@ -1173,8 +1177,8 @@ function award_field_default_fields() {
         'allowed_values' => array(
           'undergraduate' => 'Undergraduate',
           'honours' => 'Honours',
-          'graduate' => 'Graduate',
-          'RHD' => 'RHD',
+          'graduate' => 'Graduate coursework',
+          'RHD' => 'Graduate research',
           'fellowship' => 'Fellowship',
         ),
         'allowed_values_function' => '',
