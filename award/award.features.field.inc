@@ -610,6 +610,73 @@ function award_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-award-field_award_enquire_now'.
+  $fields['node-award-field_award_enquire_now'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_award_enquire_now',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'email',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'email',
+    ),
+    'field_instance' => array(
+      'bundle' => 'award',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Email address of enquiry',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'email',
+          'settings' => array(),
+          'type' => 'email_default',
+          'weight' => '8',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_award_enquire_now',
+      'label' => 'Enquiries',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+        'wysiwyg_fields' => array(
+          'settings' => array(
+            'advanced' => array(
+              'delete' => 1,
+              'hide' => 1,
+            ),
+            'formatters' => array(),
+            'icon' => '6f7621a02161e347e66d99d8ace540a3',
+            'label' => 'Enquire now',
+          ),
+          'status' => 0,
+        ),
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'email',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'email_textfield',
+        'weight' => '14',
+      ),
+    ),
+  );
+
   // Exported field: 'node-award-field_award_financial_need'.
   $fields['node-award-field_award_financial_need'] = array(
     'field_config' => array(
@@ -1156,6 +1223,89 @@ function award_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-award-field_award_submissions'.
+  $fields['node-award-field_award_submissions'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_award_submissions',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'award',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'HTTP link to Formstack form that will generate an “Apply” button on the front end. Application forms to be incorporated at a later stage.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '9',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_award_submissions',
+      'label' => 'Apply link',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => 'button complement_button',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'value',
+        'title_maxlength' => '128',
+        'title_value' => 'Apply',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '13',
+      ),
+    ),
+  );
+
   // Exported field: 'node-award-field_award_term'.
   $fields['node-award-field_award_term'] = array(
     'field_config' => array(
@@ -1369,6 +1519,101 @@ function award_field_default_fields() {
     ),
   );
 
+  // Exported field: 'node-award-field_award_uni_trust_record'.
+  $fields['node-award-field_award_uni_trust_record'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_award_uni_trust_record',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'link',
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'rel' => '',
+          'target' => 'default',
+        ),
+        'display' => array(
+          'url_cutoff' => 80,
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => 128,
+        'title_value' => '',
+        'url' => 0,
+      ),
+      'translatable' => '0',
+      'type' => 'link_field',
+    ),
+    'field_instance' => array(
+      'bundle' => 'award',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'link',
+          'settings' => array(),
+          'type' => 'link_default',
+          'weight' => '13',
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_award_uni_trust_record',
+      'label' => 'University trust record',
+      'required' => 0,
+      'settings' => array(
+        'attributes' => array(
+          'class' => '',
+          'configurable_title' => 0,
+          'rel' => '',
+          'target' => 'default',
+          'title' => '',
+        ),
+        'display' => array(
+          'url_cutoff' => '80',
+        ),
+        'enable_tokens' => 1,
+        'title' => 'optional',
+        'title_maxlength' => '128',
+        'title_value' => 'University trust record',
+        'url' => 0,
+        'user_register_form' => FALSE,
+        'validate_url' => 1,
+        'wysiwyg_fields' => array(
+          'settings' => array(
+            'advanced' => array(
+              'delete' => 1,
+              'hide' => 1,
+            ),
+            'formatters' => array(),
+            'icon' => '6f7621a02161e347e66d99d8ace540a3',
+            'label' => 'University trust record',
+          ),
+          'status' => 0,
+        ),
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_field',
+        'weight' => '12',
+      ),
+    ),
+  );
+
   // Exported field: 'node-award-field_award_value'.
   $fields['node-award-field_award_value'] = array(
     'field_config' => array(
@@ -1439,6 +1684,7 @@ function award_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Application open and closing dates');
   t('Application process');
+  t('Apply link');
   t('Approximate value');
   t('Area of study');
   t('Attachments');
@@ -1446,9 +1692,12 @@ function award_field_default_fields() {
   t('Background');
   t('Citizenship');
   t('Conditions');
+  t('Email address of enquiry');
+  t('Enquiries');
   t('Enter the approximate value of the award, rounded in whole dollars.');
   t('Financial need');
   t('Frequency');
+  t('HTTP link to Formstack form that will generate an “Apply” button on the front end. Application forms to be incorporated at a later stage.');
   t('Number (of months) ');
   t('Other');
   t('Status');
@@ -1456,6 +1705,7 @@ function award_field_default_fields() {
   t('Study level');
   t('Term');
   t('Travel support');
+  t('University trust record');
 
   return $fields;
 }

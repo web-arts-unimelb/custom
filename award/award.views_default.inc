@@ -1595,7 +1595,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['field_award_financial_need']['element_label_type'] = 'strong';
   $handler->display->display_options['fields']['field_award_financial_need']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_award_financial_need']['hide_empty'] = TRUE;
-  /* Field: Broken/missing handler */
+  /* Field: Content: University trust record */
   $handler->display->display_options['fields']['field_award_uni_trust_record']['id'] = 'field_award_uni_trust_record';
   $handler->display->display_options['fields']['field_award_uni_trust_record']['table'] = 'field_data_field_award_uni_trust_record';
   $handler->display->display_options['fields']['field_award_uni_trust_record']['field'] = 'field_award_uni_trust_record';
@@ -1607,6 +1607,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['field_award_uni_trust_record']['element_wrapper_type'] = '0';
   $handler->display->display_options['fields']['field_award_uni_trust_record']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_award_uni_trust_record']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_award_uni_trust_record']['click_sort_column'] = 'url';
   /* Field: Content: Other */
   $handler->display->display_options['fields']['field_award_other']['id'] = 'field_award_other';
   $handler->display->display_options['fields']['field_award_other']['table'] = 'field_data_field_award_other';

@@ -7,13 +7,11 @@
 /**
  * Implements hook_feeds_importer_default().
  */
-/*
 function award_feeds_importer_default() {
   $export = array();
 
   $feeds_importer = new stdClass();
-	// Edit this to true to make a default feeds_importer disabled initially
-  $feeds_importer->disabled = FALSE;
+  $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'award_xml_importer';
   $feeds_importer->config = array(
@@ -25,6 +23,7 @@ function award_feeds_importer_default() {
         'auto_detect_feeds' => FALSE,
         'use_pubsubhubbub' => FALSE,
         'designated_hub' => '',
+        'request_timeout' => NULL,
       ),
     ),
     'parser' => array(
@@ -52,7 +51,7 @@ function award_feeds_importer_default() {
           'xpathparser:18' => 'ApplyLink',
           'xpathparser:19' => 'Enquiries',
           'xpathparser:20' => 'AreaOfStudy',
-          'xpathparser:21' => 'Attachments',
+          'xpathparser:27' => 'Attachments',
           'xpathparser:22' => 'Promoted',
           'xpathparser:23' => 'Sticky',
           'xpathparser:24' => 'UniversityTrustRecordTitle',
@@ -81,7 +80,7 @@ function award_feeds_importer_default() {
           'xpathparser:18' => 0,
           'xpathparser:19' => 0,
           'xpathparser:20' => 0,
-          'xpathparser:21' => 0,
+          'xpathparser:27' => 0,
           'xpathparser:22' => 0,
           'xpathparser:23' => 0,
           'xpathparser:24' => 0,
@@ -114,7 +113,7 @@ function award_feeds_importer_default() {
             'xpathparser:18' => 0,
             'xpathparser:19' => 0,
             'xpathparser:20' => 0,
-            'xpathparser:21' => 0,
+            'xpathparser:27' => 0,
             'xpathparser:22' => 0,
             'xpathparser:23' => 0,
             'xpathparser:24' => 0,
@@ -128,7 +127,6 @@ function award_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
-        'content_type' => 'award',
         'expire' => '-1',
         'author' => '1',
         'mappings' => array(
@@ -238,9 +236,9 @@ function award_feeds_importer_default() {
             'unique' => FALSE,
           ),
           21 => array(
-            'source' => 'xpathparser:21',
-            'target' => 'field_award_attachments',
-            'unique' => FALSE,
+            'source' => 'xpathparser:27',
+            'target' => 'field_award_attachments:uri',
+            'file_exists' => '1',
           ),
           22 => array(
             'source' => 'xpathparser:22',
@@ -272,6 +270,7 @@ function award_feeds_importer_default() {
         'input_format' => 'full_html',
         'authorize' => TRUE,
         'skip_hash_check' => FALSE,
+        'bundle' => 'award',
       ),
     ),
     'content_type' => '',
@@ -285,4 +284,3 @@ function award_feeds_importer_default() {
 
   return $export;
 }
-*/

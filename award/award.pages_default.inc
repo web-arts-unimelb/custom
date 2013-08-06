@@ -7,13 +7,11 @@
 /**
  * Implements hook_default_page_manager_handlers().
  */
-/*
 function award_default_page_manager_handlers() {
   $export = array();
 
   $handler = new stdClass();
-	// Edit this to true to make a default handler disabled initially 
-  $handler->disabled = FALSE;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
   $handler->name = 'node_view_panel_context';
   $handler->task = 'node_view';
@@ -251,4 +249,3 @@ function award_default_page_manager_handlers() {
 
   return $export;
 }
-*/
