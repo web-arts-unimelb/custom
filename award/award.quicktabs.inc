@@ -7,11 +7,12 @@
 /**
  * Implements hook_quicktabs_default_quicktabs().
  */
+/*
 function award_quicktabs_default_quicktabs() {
   $export = array();
 
   $quicktabs = new stdClass();
-  $quicktabs->disabled = FALSE; /* Edit this to true to make a default quicktabs disabled initially */
+  $quicktabs->disabled = FALSE; // Edit this to true to make a default quicktabs disabled initially 
   $quicktabs->api_version = 1;
   $quicktabs->machine_name = 'grant_search';
   $quicktabs->ajax = 0;
@@ -49,7 +50,7 @@ function award_quicktabs_default_quicktabs() {
   $export['grant_search'] = $quicktabs;
 
   $quicktabs = new stdClass();
-  $quicktabs->disabled = FALSE; /* Edit this to true to make a default quicktabs disabled initially */
+  $quicktabs->disabled = FALSE; // Edit this to true to make a default quicktabs disabled initially
   $quicktabs->api_version = 1;
   $quicktabs->machine_name = 'scholarship_search';
   $quicktabs->ajax = 0;
@@ -87,7 +88,7 @@ function award_quicktabs_default_quicktabs() {
   $export['scholarship_search'] = $quicktabs;
 
   $quicktabs = new stdClass();
-  $quicktabs->disabled = FALSE; /* Edit this to true to make a default quicktabs disabled initially */
+  $quicktabs->disabled = FALSE; // Edit this to true to make a default quicktabs disabled initially 
   $quicktabs->api_version = 1;
   $quicktabs->machine_name = 'scholarship_sub_search';
   $quicktabs->ajax = 0;
@@ -125,7 +126,7 @@ function award_quicktabs_default_quicktabs() {
   $export['scholarship_sub_search'] = $quicktabs;
 
   $quicktabs = new stdClass();
-  $quicktabs->disabled = FALSE; /* Edit this to true to make a default quicktabs disabled initially */
+  $quicktabs->disabled = FALSE; // Edit this to true to make a default quicktabs disabled initially
   $quicktabs->api_version = 1;
   $quicktabs->machine_name = 'scholarships_prizes';
   $quicktabs->ajax = 0;
@@ -164,3 +165,4 @@ function award_quicktabs_default_quicktabs() {
 
   return $export;
 }
+*/
