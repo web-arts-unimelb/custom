@@ -144,6 +144,22 @@ function award_views_pre_render(&$view) {
   }
 }
 
+// Remove duplicated view search results
+// http://drupal.stackexchange.com/questions/79965/how-to-remove-duplicate-from-views-result-page
+function award_query_alter(QueryAlterableInterface $query) { 
+  if(isset($query->alterMetaData)) {
+    if(isset($query->alterMetaData['view'])) {
+			// Use devel to see which views
+      if($query->alterMetaData['view']->name == 'awards') {     
+        $fields =& $query->getGroupBy();
+        // Tried various fields to check which was the field creating the problem.
+        unset($fields['score']);
+        $query->groupBy('nid');
+      }
+    }
+  }
+}
+
 function unimelb_preprocess_views_exposed_form(&$vars, $hook) 
 {
 	if(
