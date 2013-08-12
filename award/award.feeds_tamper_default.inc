@@ -13,6 +13,51 @@ function award_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'award_xml_importer-xpathparser_10-url_absolutify';
+  $feeds_tamper->importer = 'award_xml_importer';
+  $feeds_tamper->source = 'xpathparser:10';
+  $feeds_tamper->plugin_id = 'url_absolutify';
+  $feeds_tamper->settings = array(
+    'origin' => '',
+    'global' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Absolutify URL';
+  $export['award_xml_importer-xpathparser_10-url_absolutify'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'award_xml_importer-xpathparser_11-url_absolutify';
+  $feeds_tamper->importer = 'award_xml_importer';
+  $feeds_tamper->source = 'xpathparser:11';
+  $feeds_tamper->plugin_id = 'url_absolutify';
+  $feeds_tamper->settings = array(
+    'origin' => '',
+    'global' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Absolutify URL';
+  $export['award_xml_importer-xpathparser_11-url_absolutify'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'award_xml_importer-xpathparser_12-url_absolutify';
+  $feeds_tamper->importer = 'award_xml_importer';
+  $feeds_tamper->source = 'xpathparser:12';
+  $feeds_tamper->plugin_id = 'url_absolutify';
+  $feeds_tamper->settings = array(
+    'origin' => '',
+    'global' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Absolutify URL';
+  $export['award_xml_importer-xpathparser_12-url_absolutify'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'award_xml_importer-xpathparser_2-explode';
   $feeds_tamper->importer = 'award_xml_importer';
   $feeds_tamper->source = 'xpathparser:2';
@@ -45,9 +90,9 @@ function award_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
-  $feeds_tamper->id = 'award_xml_importer-xpathparser_21-explode';
+  $feeds_tamper->id = 'award_xml_importer-xpathparser_27-explode';
   $feeds_tamper->importer = 'award_xml_importer';
-  $feeds_tamper->source = 'xpathparser:21';
+  $feeds_tamper->source = 'xpathparser:27';
   $feeds_tamper->plugin_id = 'explode';
   $feeds_tamper->settings = array(
     'separator' => '|',
@@ -56,7 +101,22 @@ function award_feeds_tamper_default() {
   );
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'Explode';
-  $export['award_xml_importer-xpathparser_21-explode'] = $feeds_tamper;
+  $export['award_xml_importer-xpathparser_27-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'award_xml_importer-xpathparser_4-url_absolutify';
+  $feeds_tamper->importer = 'award_xml_importer';
+  $feeds_tamper->source = 'xpathparser:4';
+  $feeds_tamper->plugin_id = 'url_absolutify';
+  $feeds_tamper->settings = array(
+    'origin' => '',
+    'global' => 0,
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Absolutify URL';
+  $export['award_xml_importer-xpathparser_4-url_absolutify'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */

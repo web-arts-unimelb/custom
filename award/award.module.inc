@@ -63,6 +63,39 @@ function award_form_alter(&$form, &$form_state, $form_id) {
 	 	}
  	}
  	
+ 	/* Start select / unselect all study area */
+ 	if($form_id == 'award_node_form' && $form['#node_edit_form '] = TRUE) {
+		drupal_add_js("
+			jQuery(document).ready(function() {
+			  var award_num_of_checkbox = jQuery('input[name^=\"field_award_study_area\"]').length;
+			  var award_count_use_checkbox = 0;
+			  
+			  jQuery('input[name^=\"field_award_study_area\"]').each(function(){
+					if(this.checked) {
+						++award_count_use_checkbox;
+					}	    	
+			  });
+			  
+			  if(award_count_use_checkbox == award_num_of_checkbox) {
+			  	jQuery('input[name=\"checkall\"]').attr('checked', true);
+			  }
+			});
+			
+			function checkUncheckAll(theElement) {
+			  jQuery('input[name^=\"field_award_study_area\"]').each(function(){  
+	      	this.checked = theElement.checked; 
+			  });
+			}	
+		", 'inline');
+		
+		$form['checkall'] = array(
+		  '#type' => 'checkbox',
+		  '#title' => t('Select / Unselect all study area'),
+		  '#attributes' => array('onclick' => 'checkUncheckAll(this);'),
+		  '#weight' => 15,
+		);
+	}
+ 	/* End select / unselect all study area */
 }
 
 /**
@@ -75,6 +108,25 @@ function award_views_pre_render(&$view) {
   if($view->name == "awards") {
     $results = &$view->result;
 
+		$study_area_obj = taxonomy_vocabulary_machine_name_load("study_area");
+		$tree = taxonomy_get_tree($study_area_obj->vid);
+		$full_item_num = count($tree);
+
+		// Loop through each displayed award.
+		foreach($results as $key => $result) {
+			$num_of_study_area = count($results[$key]->field_field_award_study_area);
+			if($full_item_num == $num_of_study_area || $num_of_study_area == 0) {
+        $results[$key]->field_field_award_study_area = array(
+          0 => array(
+            'rendered' => array(
+              '#markup' => $select_all_display
+            ),
+          ),
+        );	
+			}
+		}
+		
+		/*
     foreach($results as $key => $result) {
       foreach($results[$key]->field_field_award_study_area as $item) {
         if( strtolower($item['rendered']['#markup']) == $select_all ) {
@@ -86,6 +138,23 @@ function award_views_pre_render(&$view) {
             ),
           );
         }
+      }
+    }
+    */
+  }
+}
+
+// Remove duplicated view search results
+// http://drupal.stackexchange.com/questions/79965/how-to-remove-duplicate-from-views-result-page
+function award_query_alter(QueryAlterableInterface $query) { 
+  if(isset($query->alterMetaData)) {
+    if(isset($query->alterMetaData['view'])) {
+			// Use devel to see which views
+      if($query->alterMetaData['view']->name == 'awards') {     
+        $fields =& $query->getGroupBy();
+        // Tried various fields to check which was the field creating the problem.
+        unset($fields['score']);
+        $query->groupBy('nid');
       }
     }
   }

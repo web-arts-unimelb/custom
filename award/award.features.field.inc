@@ -20,6 +20,9 @@ function award_field_default_fields() {
         0 => 'node',
       ),
       'field_name' => 'body',
+      'field_permissions' => array(
+        'type' => '0',
+      ),
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -28,6 +31,7 @@ function award_field_default_fields() {
           'table' => 'filter_format',
         ),
       ),
+      'global_block_settings' => '1',
       'indexes' => array(
         'format' => array(
           0 => 'format',
@@ -375,31 +379,42 @@ function award_field_default_fields() {
         'description_field' => 1,
         'file_directory' => '',
         'file_extensions' => 'txt pdf odt odp ods csv doc docx xls xlsx ppt pptx zip',
+        'filefield_paths' => array(
+          'active_updating' => 0,
+          'file_name' => array(
+            'options' => array(
+              'pathauto' => 0,
+              'transliterate' => 0,
+            ),
+            'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+          ),
+          'file_path' => array(
+            'options' => array(
+              'pathauto' => 0,
+              'transliterate' => 0,
+            ),
+            'value' => '',
+          ),
+          'retroactive_update' => 0,
+        ),
+        'filefield_paths_enabled' => 1,
         'max_filesize' => '',
         'user_register_form' => FALSE,
-        'wysiwyg_fields' => array(
-          'settings' => array(
-            'advanced' => array(
-              'delete' => 1,
-              'hide' => 1,
-            ),
-            'formatters' => array(
-              'file_default' => 'file_default',
-            ),
-            'icon' => '32c1419a9092fb94fcc30f95d7a66fb4',
-            'label' => 'Attachments',
-          ),
-          'status' => 1,
-        ),
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'file',
         'settings' => array(
           'filefield_sources' => array(
-            'filefield_sources' => array(),
+            'filefield_sources' => array(
+              'attach' => 0,
+              'clipboard' => 0,
+              'reference' => 0,
+              'remote' => 0,
+              'upload' => 'upload',
+            ),
             'source_attach' => array(
-              'absolute' => 0,
+              'absolute' => '0',
               'attach_mode' => 'move',
               'path' => 'file_attach',
             ),
@@ -411,13 +426,36 @@ function award_field_default_fields() {
             ),
           ),
           'insert' => 0,
-          'insert_absolute' => FALSE,
+          'insert_absolute' => 0,
           'insert_class' => '',
-          'insert_default' => array(
-            0 => 'auto',
-          ),
+          'insert_default' => 'auto',
           'insert_styles' => array(
-            0 => 'auto',
+            'auto' => 'auto',
+            'colorbox__frontpage_2up' => 0,
+            'colorbox__frontpage_3up' => 0,
+            'colorbox__frontpage_4up' => 0,
+            'colorbox__frontpage_6up' => 0,
+            'colorbox__frontpage_8up' => 0,
+            'colorbox__large' => 0,
+            'colorbox__medium' => 0,
+            'colorbox__slider' => 0,
+            'colorbox__square_thumbnail' => 0,
+            'colorbox__thumbnail' => 0,
+            'custom_formatters_unimel_download_large' => 0,
+            'custom_formatters_unimel_download_small' => 0,
+            'icon_link' => 0,
+            'image' => 0,
+            'image_frontpage_2up' => 0,
+            'image_frontpage_3up' => 0,
+            'image_frontpage_4up' => 0,
+            'image_frontpage_6up' => 0,
+            'image_frontpage_8up' => 0,
+            'image_large' => 0,
+            'image_medium' => 0,
+            'image_slider' => 0,
+            'image_square_thumbnail' => 0,
+            'image_thumbnail' => 0,
+            'link' => 0,
           ),
           'insert_width' => '',
           'progress_indicator' => 'throbber',
@@ -854,11 +892,7 @@ function award_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'award',
-      'default_value' => array(
-        0 => array(
-          'value' => '',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -883,14 +917,22 @@ function award_field_default_fields() {
       'settings' => array(
         'better_formats' => array(
           'allowed_formats' => array(
-            'html_editor' => 0,
-            'plain_text' => 'plain_text',
+            'complete_full_html' => 0,
+            'filtered_html' => 0,
+            'full_html' => 'full_html',
+            'plain_text' => 0,
           ),
           'allowed_formats_toggle' => 1,
           'default_order_toggle' => 0,
           'default_order_wrapper' => array(
             'formats' => array(
-              'html_editor' => array(
+              'complete_full_html' => array(
+                'weight' => '0',
+              ),
+              'filtered_html' => array(
+                'weight' => '0',
+              ),
+              'full_html' => array(
                 'weight' => '0',
               ),
               'plain_text' => array(
@@ -901,18 +943,6 @@ function award_field_default_fields() {
         ),
         'text_processing' => '1',
         'user_register_form' => FALSE,
-        'wysiwyg_fields' => array(
-          'settings' => array(
-            'advanced' => array(
-              'delete' => 1,
-              'hide' => 1,
-            ),
-            'formatters' => array(),
-            'icon' => '6f7621a02161e347e66d99d8ace540a3',
-            'label' => 'Other',
-          ),
-          'status' => 0,
-        ),
       ),
       'widget' => array(
         'active' => 1,
@@ -955,11 +985,7 @@ function award_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'award',
-      'default_value' => array(
-        0 => array(
-          'value' => 'new',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -1173,8 +1199,8 @@ function award_field_default_fields() {
         'allowed_values' => array(
           'undergraduate' => 'Undergraduate',
           'honours' => 'Honours',
-          'graduate' => 'Graduate',
-          'RHD' => 'RHD',
+          'graduate' => 'Graduate coursework',
+          'RHD' => 'Graduate research',
           'fellowship' => 'Fellowship',
         ),
         'allowed_values_function' => '',
