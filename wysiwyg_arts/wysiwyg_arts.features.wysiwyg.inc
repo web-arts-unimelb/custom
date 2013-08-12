@@ -57,7 +57,18 @@ function wysiwyg_arts_wysiwyg_default_profiles() {
       'css_classes' => 'Image float left=wysiwyg-left
 Image float right=wysiwyg-right
 Notice=notice
-Important Notice=importantnotice',
+Important Notice=importantnotice
+1 Column First=col-1 first
+1 Column=col-1
+1 Column Last=col-1 rightside
+2 Column First=col-2 first
+2 Column=col-2
+2 Column Last=col-2 rightside
+3 Column=col-3
+3 Column Last=col-3 rightside
+4 Column First=col-4 first
+4 Column=col-4
+4 Column Last=col-4 rightside',
     ),
     'rdf_mapping' => array(),
   );
