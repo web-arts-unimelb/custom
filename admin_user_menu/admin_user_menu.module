@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the admin_user_menu feature.
+ */
+
+include_once 'admin_user_menu.features.inc';
