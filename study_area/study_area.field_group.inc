@@ -13,33 +13,6 @@ function study_area_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_fae|node|study_area|form';
-  $field_group->group_name = 'group_fae';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'study_area';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Find an Expert',
-    'weight' => '11',
-    'children' => array(
-      0 => 'field_fae_resource',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $export['group_fae|node|study_area|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_shared_media|node|study_area|form';
   $field_group->group_name = 'group_shared_media';
   $field_group->entity_type = 'node';
@@ -52,7 +25,6 @@ function study_area_field_group_info() {
     'children' => array(
       0 => 'field_shared_images',
       1 => 'field_shared_attachments',
-      2 => 'field_shared_video',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -66,6 +38,34 @@ function study_area_field_group_info() {
     ),
   );
   $export['group_shared_media|node|study_area|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_shared_structure|node|study_area|form';
+  $field_group->group_name = 'group_shared_structure';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'study_area';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Structure',
+    'weight' => '9',
+    'children' => array(
+      0 => 'field_shared_tags',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'label' => 'Structure',
+      'instance_settings' => array(
+        'required_fields' => 0,
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $export['group_shared_structure|node|study_area|form'] = $field_group;
 
   return $export;
 }

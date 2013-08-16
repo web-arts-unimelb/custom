@@ -63,6 +63,7 @@ function study_area_views_default_views() {
 
   /* Display: Block: Study  */
   $handler = $view->new_display('block', 'Block: Study ', 'block');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
   $export['study_area'] = $view;
 
   return $export;
