@@ -109,12 +109,14 @@ function award_views_pre_render(&$view) {
     $results = &$view->result;
 
 		$study_area_obj = taxonomy_vocabulary_machine_name_load("study_area");
-		$tree = taxonomy_get_tree($study_area_obj->vid);
+		$tree = taxonomy_get_tree($study_area_obj->vid, 0, NULL);
 		$full_item_num = count($tree);
 
 		// Loop through each displayed award.
 		foreach($results as $key => $result) {
-			$num_of_study_area = count($results[$key]->field_field_award_study_area);
+			$used_study_area = _remove_duplicated_terms_in_view($results[$key]->field_field_award_study_area);
+			$num_of_study_area = count($used_study_area);
+						
 			if($full_item_num == $num_of_study_area || $num_of_study_area == 0) {
         $results[$key]->field_field_award_study_area = array(
           0 => array(
@@ -142,6 +144,19 @@ function award_views_pre_render(&$view) {
     }
     */
   }
+}
+
+function _remove_duplicated_terms_in_view($input_array) {
+	$return_array = array();
+	
+	foreach($input_array as $term) {
+		$inserted_term = $term['rendered']['#markup'];
+		if(!in_array($inserted_term, $return_array)) {
+			$return_array[] = $inserted_term;
+		}
+	}
+
+	return $return_array;
 }
 
 // Remove duplicated view search results
