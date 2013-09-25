@@ -1,0 +1,17 @@
+<?php
+
+// hook_webform_submission_render_alter
+function mywebform_webform_submission_render_alter(&$renderable) {
+	
+	foreach (element_children($renderable) as $key) {    
+      $renderable[$key]['#title'] = "\n\n" . $renderable[$key]['#title'];
+      if (isset($renderable[$key]['#component']['type']) && $renderable[$key]['#component']['type'] == 'fieldset') {
+        $fieldset = &$renderable[$key];      
+        foreach (element_children($fieldset) as $key2) {
+          $fieldset[$key2]['#title'] = "\n\n" . $fieldset[$key2]['#title'];
+      }
+    }
+  }
+	
+
+}
