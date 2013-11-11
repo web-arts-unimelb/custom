@@ -115,7 +115,8 @@ function award_views_pre_render(&$view) {
 		// Loop through each displayed award.
 		foreach($results as $key => $result) {
 			$num_of_study_area = count($results[$key]->field_field_award_study_area);
-			if($full_item_num == $num_of_study_area || $num_of_study_area == 0) {
+
+			if($full_item_num <= $num_of_study_area || $num_of_study_area == 0) {
         $results[$key]->field_field_award_study_area = array(
           0 => array(
             'rendered' => array(
