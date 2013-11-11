@@ -65,6 +65,7 @@ function award_form_alter(&$form, &$form_state, $form_id) {
  	
  	/* Start select / unselect all study area */
  	if($form_id == 'award_node_form' && $form['#node_edit_form '] = TRUE) {
+		
 		drupal_add_js("
 			jQuery(document).ready(function() {
 			  var award_num_of_checkbox = jQuery('input[name^=\"field_award_study_area\"]').length;
@@ -87,12 +88,21 @@ function award_form_alter(&$form, &$form_state, $form_id) {
 			  });
 			}	
 		", 'inline');
-		
+
+		// Change order
+		$field_award_study_area_orig_weight = $form['field_award_study_area']['#weight'];
+		$form['field_award_study_area']['#weight'] = $form['field_award_study_area']['#weight'] + 1;
+
+		// Only repository site has this field
+		if(isset($form['field_syndication_site'])) {	
+			$form['field_syndication_site']['#weight'] = $form['field_syndication_site']['#weight'] + 1;
+		}
+
 		$form['checkall'] = array(
 		  '#type' => 'checkbox',
 		  '#title' => t('Select / Unselect all study area'),
 		  '#attributes' => array('onclick' => 'checkUncheckAll(this);'),
-		  '#weight' => 15,
+		  '#weight' => $field_award_study_area_orig_weight,
 		);
 	}
  	/* End select / unselect all study area */
