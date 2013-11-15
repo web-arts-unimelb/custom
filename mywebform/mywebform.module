@@ -3,13 +3,21 @@
 // hook_webform_submission_render_alter
 // https://drupal.org/node/1042330
 function mywebform_webform_submission_render_alter(&$renderable) {
-	
-	foreach (element_children($renderable) as $key) {    
-      $renderable[$key]['#title'] = "\n\n" . $renderable[$key]['#title'];
+
+	if($renderable['#format'] == "html") {
+		$breaker = "<br/>";
+	}
+	else {
+		$breaker = "\n\n";
+	}
+
+	foreach (element_children($renderable) as $key) {
+			// It depends on whether it is html or plain text email    
+			$renderable[$key]['#title'] = $breaker. $renderable[$key]['#title'];
       if (isset($renderable[$key]['#component']['type']) && $renderable[$key]['#component']['type'] == 'fieldset') {
         $fieldset = &$renderable[$key];      
         foreach (element_children($fieldset) as $key2) {
-          $fieldset[$key2]['#title'] = "\n\n" . $fieldset[$key2]['#title'];
+          $fieldset[$key2]['#title'] = $breaker. $fieldset[$key2]['#title'];
       }
     }
   }
