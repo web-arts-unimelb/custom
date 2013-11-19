@@ -3,16 +3,35 @@
 // hook_webform_submission_render_alter
 // https://drupal.org/node/1042330
 function mywebform_webform_submission_render_alter(&$renderable) {
-	
-	foreach (element_children($renderable) as $key) {    
-      $renderable[$key]['#title'] = "\n\n" . $renderable[$key]['#title'];
-      if (isset($renderable[$key]['#component']['type']) && $renderable[$key]['#component']['type'] == 'fieldset') {
-        $fieldset = &$renderable[$key];      
-        foreach (element_children($fieldset) as $key2) {
-          $fieldset[$key2]['#title'] = "\n\n" . $fieldset[$key2]['#title'];
-      }
-    }
-  }
-	
+	$tmp_stored_day = ''; // For event management form
 
+	foreach (element_children($renderable) as $key) {    
+  	$renderable[$key]['#title'] = "\n\n" . $renderable[$key]['#title'];
+
+   	if (isset($renderable[$key]['#component']['type']) && $renderable[$key]['#component']['type'] == 'fieldset') {
+    	$fieldset = &$renderable[$key];      
+      foreach (element_children($fieldset) as $key2) {
+      	$fieldset[$key2]['#title'] = "\n\n" . $fieldset[$key2]['#title'];
+    	}
+  	}
+
+		// Start event management form
+    if($renderable[$key]['#id'] === 'edit-submitted-event-date') {
+			$year = $renderable[$key]['#value']['year'];
+			$month = $renderable[$key]['#value']['month'];
+			$day = $renderable[$key]['#value']['day'];
+			$mytime = $year. "-". $month. "-". $day;
+
+			$dt = new DateTime($mytime);
+			$tmp_stored_day = $dt->format('l'); // e.g. output Saturday
+    }
+
+		// This will execute later, as field is under edit-submitted-event-date
+    if($renderable[$key]['#id'] === 'edit-submitted-event-day') {
+			$renderable[$key]['#value'] = $tmp_stored_day;
+    }
+		// End event management form
+
+  }
 }
+
