@@ -59,6 +59,14 @@ function award_quicktabs_default_quicktabs() {
   $quicktabs->tabs = array(
     0 => array(
       'vid' => 'awards',
+      'display' => 'page_4',
+      'args' => '',
+      'title' => 'Search',
+      'weight' => '-100',
+      'type' => 'view',
+    ),
+    1 => array(
+      'vid' => 'awards',
       'display' => 'page_5',
       'args' => '',
       'title' => 'Advanced search',
@@ -74,6 +82,7 @@ function award_quicktabs_default_quicktabs() {
   // Included for use with string extractors like potx.
   t('Advanced search');
   t('Scholarships');
+  t('Search');
 
   $export['scholarship_search'] = $quicktabs;
 
@@ -83,10 +92,18 @@ function award_quicktabs_default_quicktabs() {
   $quicktabs->machine_name = 'scholarship_sub_search';
   $quicktabs->ajax = 0;
   $quicktabs->hide_empty_tabs = FALSE;
-  $quicktabs->default_tab = 1;
+  $quicktabs->default_tab = 0;
   $quicktabs->title = 'Scholarship search';
   $quicktabs->tabs = array(
     0 => array(
+      'vid' => 'awards',
+      'display' => 'block_6',
+      'args' => '',
+      'title' => 'Search',
+      'weight' => '-100',
+      'type' => 'view',
+    ),
+    1 => array(
       'vid' => 'awards',
       'display' => 'block_4',
       'args' => '',
@@ -103,6 +120,7 @@ function award_quicktabs_default_quicktabs() {
   // Included for use with string extractors like potx.
   t('Advanced Search');
   t('Scholarship search');
+  t('Search');
 
   $export['scholarship_sub_search'] = $quicktabs;
 
@@ -116,6 +134,14 @@ function award_quicktabs_default_quicktabs() {
   $quicktabs->title = 'Prize search';
   $quicktabs->tabs = array(
     0 => array(
+      'vid' => 'awards',
+      'display' => 'block_7',
+      'args' => '',
+      'title' => 'Search',
+      'weight' => '-100',
+      'type' => 'view',
+    ),
+    1 => array(
       'vid' => 'awards',
       'display' => 'block_5',
       'args' => '',
@@ -132,6 +158,7 @@ function award_quicktabs_default_quicktabs() {
   // Included for use with string extractors like potx.
   t('Advanced Search');
   t('Prize search');
+  t('Search');
 
   $export['scholarships_prizes'] = $quicktabs;
 
