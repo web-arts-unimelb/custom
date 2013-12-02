@@ -13,7 +13,7 @@ function award_taxonomy_default_vocabularies() {
       'name' => 'Areas of study',
       'machine_name' => 'study_area',
       'description' => 'Areas of study',
-      'hierarchy' => '0',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '-7',
       'rdf_mapping' => array(

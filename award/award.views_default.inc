@@ -122,7 +122,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Prize';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Area of study */
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';
@@ -252,7 +252,7 @@ function award_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Content: Area of study (field_award_study_area) */
+  /* Filter criterion: Field: Area of study (field_award_study_area) */
   $handler->display->display_options['filters']['field_award_study_area_tid']['id'] = 'field_award_study_area_tid';
   $handler->display->display_options['filters']['field_award_study_area_tid']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['filters']['field_award_study_area_tid']['field'] = 'field_award_study_area_tid';
@@ -348,7 +348,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Grant';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Area of study */
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';
@@ -447,7 +447,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = 'Scholarship';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Area of study */
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';
@@ -570,7 +570,7 @@ function award_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Content: Area of study (field_award_study_area) */
+  /* Filter criterion: Field: Area of study (field_award_study_area) */
   $handler->display->display_options['filters']['field_award_study_area_tid']['id'] = 'field_award_study_area_tid';
   $handler->display->display_options['filters']['field_award_study_area_tid']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['filters']['field_award_study_area_tid']['field'] = 'field_award_study_area_tid';
@@ -792,7 +792,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['field_award_travel_support']['empty'] = 'N/A';
   $handler->display->display_options['fields']['field_award_travel_support']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_award_travel_support']['empty_zero'] = TRUE;
-  /* Field: Content: Area of study */
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';
@@ -1090,7 +1090,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['field_award_travel_support']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_award_travel_support']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_award_travel_support']['alter']['text'] = '<strong>Travel support:</strong> [field_award_travel_support]<br/>';
-  /* Field: Content: Area of study */
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';
@@ -1237,7 +1237,7 @@ function award_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Content: Area of study (field_award_study_area) */
+  /* Filter criterion: Field: Area of study (field_award_study_area) */
   $handler->display->display_options['filters']['field_award_study_area_tid']['id'] = 'field_award_study_area_tid';
   $handler->display->display_options['filters']['field_award_study_area_tid']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['filters']['field_award_study_area_tid']['field'] = 'field_award_study_area_tid';
@@ -1487,7 +1487,7 @@ function award_views_default_views() {
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Field: Content: Area of study */
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';
@@ -1664,6 +1664,7 @@ function award_views_default_views() {
   /* Display: Block: Grants Advanced */
   $handler = $view->new_display('block', 'Block: Grants Advanced', 'block_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<h3>Search</h3>';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'award-search';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
@@ -1704,7 +1705,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_plain';
-  /* Field: Content: Area of study */
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';
@@ -1830,7 +1831,7 @@ function award_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Content: Area of study (field_award_study_area) */
+  /* Filter criterion: Field: Area of study (field_award_study_area) */
   $handler->display->display_options['filters']['field_award_study_area_tid']['id'] = 'field_award_study_area_tid';
   $handler->display->display_options['filters']['field_award_study_area_tid']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['filters']['field_award_study_area_tid']['field'] = 'field_award_study_area_tid';
@@ -1897,14 +1898,27 @@ function award_views_default_views() {
     5 => 0,
   );
   $handler->display->display_options['filters']['field_award_type_value_1']['expose']['reduce'] = TRUE;
+  $handler->display->display_options['block_description'] = 'Block: Grants Advanced';
 
   /* Display: Block: Scholarships Advanced */
   $handler = $view->new_display('block', 'Block: Scholarships Advanced', 'block_4');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['enabled'] = FALSE;
+  $handler->display->display_options['title'] = '<h3>Search</h3>';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'award-search';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page_1';
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Nid */
@@ -1914,6 +1928,17 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Scholarship';
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['title']['alter']['alt'] = '[body]';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_class'] = 'the_column_1';
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -1927,18 +1952,37 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_plain';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = 'Scholarship';
-  $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = 'node/[nid]';
-  $handler->display->display_options['fields']['title']['alter']['alt'] = '[body]';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_class'] = 'the_column_1';
-  /* Field: Content: Area of study */
+  /* Field: Content: Students */
+  $handler->display->display_options['fields']['field_award_students']['id'] = 'field_award_students';
+  $handler->display->display_options['fields']['field_award_students']['table'] = 'field_data_field_award_students';
+  $handler->display->display_options['fields']['field_award_students']['field'] = 'field_award_students';
+  $handler->display->display_options['fields']['field_award_students']['label'] = '';
+  $handler->display->display_options['fields']['field_award_students']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_award_students']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_award_students']['empty'] = 'All';
+  $handler->display->display_options['fields']['field_award_students']['delta_offset'] = '0';
+  /* Field: Content: Study level */
+  $handler->display->display_options['fields']['field_award_study_level']['id'] = 'field_award_study_level';
+  $handler->display->display_options['fields']['field_award_study_level']['table'] = 'field_data_field_award_study_level';
+  $handler->display->display_options['fields']['field_award_study_level']['field'] = 'field_award_study_level';
+  $handler->display->display_options['fields']['field_award_study_level']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_award_study_level']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_award_study_level']['alter']['text'] = '[field_award_study_level]';
+  $handler->display->display_options['fields']['field_award_study_level']['element_wrapper_type'] = '0';
+  $handler->display->display_options['fields']['field_award_study_level']['element_wrapper_class'] = 'inline-list';
+  $handler->display->display_options['fields']['field_award_study_level']['empty'] = 'All';
+  $handler->display->display_options['fields']['field_award_study_level']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_award_study_level']['delta_offset'] = '0';
+  /* Field: Content: Travel support */
+  $handler->display->display_options['fields']['field_award_travel_support']['id'] = 'field_award_travel_support';
+  $handler->display->display_options['fields']['field_award_travel_support']['table'] = 'field_data_field_award_travel_support';
+  $handler->display->display_options['fields']['field_award_travel_support']['field'] = 'field_award_travel_support';
+  $handler->display->display_options['fields']['field_award_travel_support']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_award_travel_support']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_award_travel_support']['alter']['text'] = '<b>Travel support:</b> [field_award_travel_support]<br />';
+  $handler->display->display_options['fields']['field_award_travel_support']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_award_travel_support']['hide_empty'] = TRUE;
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';
@@ -1947,16 +1991,17 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['field_award_study_area']['empty'] = '<ul><li class="first last">Any</li></ul>';
   $handler->display->display_options['fields']['field_award_study_area']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_award_study_area']['delta_offset'] = '0';
-  /* Field: Content: Study level */
-  $handler->display->display_options['fields']['field_award_study_level']['id'] = 'field_award_study_level';
-  $handler->display->display_options['fields']['field_award_study_level']['table'] = 'field_data_field_award_study_level';
-  $handler->display->display_options['fields']['field_award_study_level']['field'] = 'field_award_study_level';
-  $handler->display->display_options['fields']['field_award_study_level']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_award_study_level']['element_wrapper_type'] = '0';
-  $handler->display->display_options['fields']['field_award_study_level']['element_wrapper_class'] = 'inline-list';
-  $handler->display->display_options['fields']['field_award_study_level']['empty'] = 'Any';
-  $handler->display->display_options['fields']['field_award_study_level']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_award_study_level']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_award_study_area']['multi_type'] = 'ul';
+  /* Field: Content: Financial need */
+  $handler->display->display_options['fields']['field_award_financial_need']['id'] = 'field_award_financial_need';
+  $handler->display->display_options['fields']['field_award_financial_need']['table'] = 'field_data_field_award_financial_need';
+  $handler->display->display_options['fields']['field_award_financial_need']['field'] = 'field_award_financial_need';
+  $handler->display->display_options['fields']['field_award_financial_need']['label'] = '';
+  $handler->display->display_options['fields']['field_award_financial_need']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_award_financial_need']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_award_financial_need']['alter']['text'] = '<b>Financial need:</b> [field_award_financial_need]<br />';
+  $handler->display->display_options['fields']['field_award_financial_need']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_award_financial_need']['hide_empty'] = TRUE;
   /* Field: Content: Citizenship */
   $handler->display->display_options['fields']['field_award_citizenship']['id'] = 'field_award_citizenship';
   $handler->display->display_options['fields']['field_award_citizenship']['table'] = 'field_data_field_award_citizenship';
@@ -1968,36 +2013,104 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['field_award_citizenship']['element_class'] = 'inline-list';
   $handler->display->display_options['fields']['field_award_citizenship']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_award_citizenship']['delta_offset'] = '0';
-  /* Field: Content: Financial need */
-  $handler->display->display_options['fields']['field_award_financial_need']['id'] = 'field_award_financial_need';
-  $handler->display->display_options['fields']['field_award_financial_need']['table'] = 'field_data_field_award_financial_need';
-  $handler->display->display_options['fields']['field_award_financial_need']['field'] = 'field_award_financial_need';
-  $handler->display->display_options['fields']['field_award_financial_need']['label'] = '';
-  $handler->display->display_options['fields']['field_award_financial_need']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_award_financial_need']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_award_financial_need']['alter']['text'] = '<b>Financial need:</b> [field_award_financial_need]<br />';
-  $handler->display->display_options['fields']['field_award_financial_need']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_award_financial_need']['hide_empty'] = TRUE;
-  /* Field: Content: Travel support */
-  $handler->display->display_options['fields']['field_award_travel_support']['id'] = 'field_award_travel_support';
-  $handler->display->display_options['fields']['field_award_travel_support']['table'] = 'field_data_field_award_travel_support';
-  $handler->display->display_options['fields']['field_award_travel_support']['field'] = 'field_award_travel_support';
-  $handler->display->display_options['fields']['field_award_travel_support']['label'] = '';
-  $handler->display->display_options['fields']['field_award_travel_support']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_award_travel_support']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_award_travel_support']['alter']['text'] = '<b>Travel support:</b> [field_award_travel_support]<br />';
-  $handler->display->display_options['fields']['field_award_travel_support']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_award_travel_support']['hide_empty'] = TRUE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = 'Eligibility';
+  $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<b>Study level:</b> [field_award_study_level]<br />
 [field_award_travel_support]
 <b>Citizenship:</b> [field_award_citizenship]
 ';
   $handler->display->display_options['fields']['nothing']['element_class'] = 'the_column_3';
+  /* Field: Content: Approximate value */
+  $handler->display->display_options['fields']['field_award_value']['id'] = 'field_award_value';
+  $handler->display->display_options['fields']['field_award_value']['table'] = 'field_data_field_award_value';
+  $handler->display->display_options['fields']['field_award_value']['field'] = 'field_award_value';
+  $handler->display->display_options['fields']['field_award_value']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_award_value']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_award_value']['alter']['text'] = '<strong>Approx:</strong> $[field_award_value]<br />';
+  $handler->display->display_options['fields']['field_award_value']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_award_value']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_award_value']['settings'] = array(
+    'thousand_separator' => ',',
+    'decimal_separator' => '.',
+    'scale' => '0',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Faculty of Arts: Multiple Fields */
+  $handler->display->display_options['fields']['views_multiple_field']['id'] = 'views_multiple_field';
+  $handler->display->display_options['fields']['views_multiple_field']['table'] = 'views';
+  $handler->display->display_options['fields']['views_multiple_field']['field'] = 'views_multiple_field';
+  $handler->display->display_options['fields']['views_multiple_field']['label'] = 'Student type';
+  $handler->display->display_options['fields']['views_multiple_field']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['views_multiple_field']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['views_multiple_field']['alter']['text'] = '<strong>Student type:</strong> [views_multiple_field]<br/>';
+  $handler->display->display_options['fields']['views_multiple_field']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['views_multiple_field']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['views_multiple_field']['views_multiple_field_field'] = 'field_field_award_students';
+  /* Field: Faculty of Arts: Multiple Fields */
+  $handler->display->display_options['fields']['views_multiple_field_1']['id'] = 'views_multiple_field_1';
+  $handler->display->display_options['fields']['views_multiple_field_1']['table'] = 'views';
+  $handler->display->display_options['fields']['views_multiple_field_1']['field'] = 'views_multiple_field';
+  $handler->display->display_options['fields']['views_multiple_field_1']['label'] = 'Study level';
+  $handler->display->display_options['fields']['views_multiple_field_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['views_multiple_field_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['views_multiple_field_1']['alter']['text'] = '<strong>Study level:</strong> [views_multiple_field_1]<br/>';
+  $handler->display->display_options['fields']['views_multiple_field_1']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['views_multiple_field_1']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['views_multiple_field_1']['views_multiple_field_field'] = 'field_field_award_study_level';
+  /* Field: Content: Status */
+  $handler->display->display_options['fields']['field_award_status']['id'] = 'field_award_status';
+  $handler->display->display_options['fields']['field_award_status']['table'] = 'field_data_field_award_status';
+  $handler->display->display_options['fields']['field_award_status']['field'] = 'field_award_status';
+  $handler->display->display_options['fields']['field_award_status']['label'] = '';
+  $handler->display->display_options['fields']['field_award_status']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_award_status']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_award_status']['alter']['text'] = ' <span class="award-status award-status-[field_award_status-value]">[field_award_status]</span>';
+  $handler->display->display_options['fields']['field_award_status']['element_class'] = '[field_award_status-value]';
+  $handler->display->display_options['fields']['field_award_status']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_award_status']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_award_status']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_award_status']['delta_offset'] = '0';
+  /* Field: Content: Application open and closing dates */
+  $handler->display->display_options['fields']['field_award_application_date']['id'] = 'field_award_application_date';
+  $handler->display->display_options['fields']['field_award_application_date']['table'] = 'field_data_field_award_application_date';
+  $handler->display->display_options['fields']['field_award_application_date']['field'] = 'field_award_application_date';
+  $handler->display->display_options['fields']['field_award_application_date']['label'] = '';
+  $handler->display->display_options['fields']['field_award_application_date']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_award_application_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_award_application_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Field: Faculty of Arts: Status by Date */
+  $handler->display->display_options['fields']['arts_views_extras_date_status_field']['id'] = 'arts_views_extras_date_status_field';
+  $handler->display->display_options['fields']['arts_views_extras_date_status_field']['table'] = 'views';
+  $handler->display->display_options['fields']['arts_views_extras_date_status_field']['field'] = 'arts_views_extras_date_status_field';
+  $handler->display->display_options['fields']['arts_views_extras_date_status_field']['label'] = '';
+  $handler->display->display_options['fields']['arts_views_extras_date_status_field']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['arts_views_extras_date_status_field']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['arts_views_extras_date_status_field']['alter']['text'] = '<strong>Status</strong>: <span class="award-status award-status-[arts_views_extras_date_status_field]">[arts_views_extras_date_status_field]</span> [field_award_status]<br />';
+  $handler->display->display_options['fields']['arts_views_extras_date_status_field']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['arts_views_extras_date_status_field']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['arts_views_extras_date_status_field']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['arts_views_extras_date_status_field']['status_date_field'] = 'field_field_award_application_date';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['label'] = 'Information';
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '[views_multiple_field]
+[views_multiple_field_1]
+[field_award_travel_support]
+[field_award_value]
+[arts_views_extras_date_status_field]';
+  $handler->display->display_options['fields']['nothing_1']['element_class'] = 'the_column_3';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -2015,14 +2128,6 @@ function award_views_default_views() {
     'award' => 'award',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Award type (field_award_type) */
-  $handler->display->display_options['filters']['field_award_type_value']['id'] = 'field_award_type_value';
-  $handler->display->display_options['filters']['field_award_type_value']['table'] = 'field_data_field_award_type';
-  $handler->display->display_options['filters']['field_award_type_value']['field'] = 'field_award_type_value';
-  $handler->display->display_options['filters']['field_award_type_value']['value'] = array(
-    'scholarship' => 'scholarship',
-  );
-  $handler->display->display_options['filters']['field_award_type_value']['group'] = 1;
   /* Filter criterion: Search: Search Terms */
   $handler->display->display_options['filters']['keys']['id'] = 'keys';
   $handler->display->display_options['filters']['keys']['table'] = 'search_index';
@@ -2031,7 +2136,6 @@ function award_views_default_views() {
   $handler->display->display_options['filters']['keys']['exposed'] = TRUE;
   $handler->display->display_options['filters']['keys']['expose']['operator_id'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['label'] = 'Keywords';
-  $handler->display->display_options['filters']['keys']['expose']['description'] = 'Enter one or more keywords to search for';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
   $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(
@@ -2042,11 +2146,55 @@ function award_views_default_views() {
     3 => 0,
     4 => 0,
     5 => 0,
+    8 => 0,
   );
-  /* Filter criterion: Content: Area of study (field_award_study_area) */
+  /* Filter criterion: Field: Area of study (field_award_study_area) */
   $handler->display->display_options['filters']['field_award_study_area_tid']['id'] = 'field_award_study_area_tid';
   $handler->display->display_options['filters']['field_award_study_area_tid']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['filters']['field_award_study_area_tid']['field'] = 'field_award_study_area_tid';
+  $handler->display->display_options['filters']['field_award_study_area_tid']['value'] = array(
+    59 => '59',
+    61 => '61',
+    60 => '60',
+    62 => '62',
+    63 => '63',
+    64 => '64',
+    65 => '65',
+    66 => '66',
+    67 => '67',
+    68 => '68',
+    69 => '69',
+    70 => '70',
+    71 => '71',
+    72 => '72',
+    73 => '73',
+    74 => '74',
+    75 => '75',
+    86 => '86',
+    87 => '87',
+    88 => '88',
+    92 => '92',
+    89 => '89',
+    90 => '90',
+    91 => '91',
+    76 => '76',
+    77 => '77',
+    78 => '78',
+    79 => '79',
+    80 => '80',
+    81 => '81',
+    82 => '82',
+    83 => '83',
+    84 => '84',
+    85 => '85',
+    93 => '93',
+    94 => '94',
+    95 => '95',
+    96 => '96',
+    98 => '98',
+    99 => '99',
+    97 => '97',
+  );
   $handler->display->display_options['filters']['field_award_study_area_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_award_study_area_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_award_study_area_tid']['expose']['operator_id'] = 'field_award_study_area_tid_op';
@@ -2062,33 +2210,25 @@ function award_views_default_views() {
     3 => 0,
     4 => 0,
     5 => 0,
+    8 => 0,
   );
+  $handler->display->display_options['filters']['field_award_study_area_tid']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['field_award_study_area_tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['field_award_study_area_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_award_study_area_tid']['vocabulary'] = 'study_area';
   $handler->display->display_options['filters']['field_award_study_area_tid']['hierarchy'] = 1;
-  /* Filter criterion: Content: Citizenship (field_award_citizenship) */
-  $handler->display->display_options['filters']['field_award_citizenship_value']['id'] = 'field_award_citizenship_value';
-  $handler->display->display_options['filters']['field_award_citizenship_value']['table'] = 'field_data_field_award_citizenship';
-  $handler->display->display_options['filters']['field_award_citizenship_value']['field'] = 'field_award_citizenship_value';
-  $handler->display->display_options['filters']['field_award_citizenship_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_award_citizenship_value']['expose']['operator_id'] = 'field_award_citizenship_value_op';
-  $handler->display->display_options['filters']['field_award_citizenship_value']['expose']['label'] = 'Citizenship';
-  $handler->display->display_options['filters']['field_award_citizenship_value']['expose']['operator'] = 'field_award_citizenship_value_op';
-  $handler->display->display_options['filters']['field_award_citizenship_value']['expose']['identifier'] = 'field_award_citizenship_value';
-  $handler->display->display_options['filters']['field_award_citizenship_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    6 => 0,
-    7 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-  );
   /* Filter criterion: Content: Study level (field_award_study_level) */
   $handler->display->display_options['filters']['field_award_study_level_value']['id'] = 'field_award_study_level_value';
   $handler->display->display_options['filters']['field_award_study_level_value']['table'] = 'field_data_field_award_study_level';
   $handler->display->display_options['filters']['field_award_study_level_value']['field'] = 'field_award_study_level_value';
+  $handler->display->display_options['filters']['field_award_study_level_value']['value'] = array(
+    'undergraduate' => 'undergraduate',
+    'honours' => 'honours',
+    'graduate' => 'graduate',
+    'RHD' => 'RHD',
+    'fellowship' => 'fellowship',
+  );
+  $handler->display->display_options['filters']['field_award_study_level_value']['group'] = 1;
   $handler->display->display_options['filters']['field_award_study_level_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_award_study_level_value']['expose']['operator_id'] = 'field_award_study_level_value_op';
   $handler->display->display_options['filters']['field_award_study_level_value']['expose']['label'] = 'Study level';
@@ -2102,11 +2242,14 @@ function award_views_default_views() {
     3 => 0,
     4 => 0,
     5 => 0,
+    8 => 0,
   );
+  $handler->display->display_options['filters']['field_award_study_level_value']['expose']['reduce'] = TRUE;
   /* Filter criterion: Content: Travel support (field_award_travel_support) */
   $handler->display->display_options['filters']['field_award_travel_support_value']['id'] = 'field_award_travel_support_value';
   $handler->display->display_options['filters']['field_award_travel_support_value']['table'] = 'field_data_field_award_travel_support';
   $handler->display->display_options['filters']['field_award_travel_support_value']['field'] = 'field_award_travel_support_value';
+  $handler->display->display_options['filters']['field_award_travel_support_value']['group'] = 1;
   $handler->display->display_options['filters']['field_award_travel_support_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_award_travel_support_value']['expose']['operator_id'] = 'field_award_travel_support_value_op';
   $handler->display->display_options['filters']['field_award_travel_support_value']['expose']['label'] = 'Travel support';
@@ -2121,10 +2264,37 @@ function award_views_default_views() {
     4 => 0,
     5 => 0,
   );
+  /* Filter criterion: Content: Award type (field_award_type) */
+  $handler->display->display_options['filters']['field_award_type_value']['id'] = 'field_award_type_value';
+  $handler->display->display_options['filters']['field_award_type_value']['table'] = 'field_data_field_award_type';
+  $handler->display->display_options['filters']['field_award_type_value']['field'] = 'field_award_type_value';
+  $handler->display->display_options['filters']['field_award_type_value']['value'] = array(
+    'scholarship' => 'scholarship',
+    'prize' => 'prize',
+    'grant' => 'grant',
+  );
+  $handler->display->display_options['filters']['field_award_type_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_award_type_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_award_type_value']['expose']['operator_id'] = 'field_award_type_value_op';
+  $handler->display->display_options['filters']['field_award_type_value']['expose']['label'] = 'Award type';
+  $handler->display->display_options['filters']['field_award_type_value']['expose']['operator'] = 'field_award_type_value_op';
+  $handler->display->display_options['filters']['field_award_type_value']['expose']['identifier'] = 'field_award_type_value';
+  $handler->display->display_options['filters']['field_award_type_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => '1',
+    6 => 0,
+    7 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    8 => 0,
+  );
+  $handler->display->display_options['block_description'] = 'Block: Scholarships Advanced';
 
   /* Display: Block: Prizes Advanced */
   $handler = $view->new_display('block', 'Block: Prizes Advanced', 'block_5');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<h3>Search</h3>';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'award-search';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
@@ -2165,7 +2335,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_plain';
-  /* Field: Content: Area of study */
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';
@@ -2290,7 +2460,7 @@ function award_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Content: Area of study (field_award_study_area) */
+  /* Filter criterion: Field: Area of study (field_award_study_area) */
   $handler->display->display_options['filters']['field_award_study_area_tid']['id'] = 'field_award_study_area_tid';
   $handler->display->display_options['filters']['field_award_study_area_tid']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['filters']['field_award_study_area_tid']['field'] = 'field_award_study_area_tid';
@@ -2400,7 +2570,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_plain';
-  /* Field: Content: Area of study */
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';
@@ -2577,7 +2747,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_class'] = 'the_column_1';
-  /* Field: Content: Area of study */
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';
@@ -2726,7 +2896,7 @@ function award_views_default_views() {
   $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_plain';
-  /* Field: Content: Area of study */
+  /* Field: Field: Area of study */
   $handler->display->display_options['fields']['field_award_study_area']['id'] = 'field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['table'] = 'field_data_field_award_study_area';
   $handler->display->display_options['fields']['field_award_study_area']['field'] = 'field_award_study_area';

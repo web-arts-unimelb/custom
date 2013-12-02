@@ -35,7 +35,7 @@ function award_field_group_info() {
       'label' => 'Eligibility information',
       'instance_settings' => array(
         'required_fields' => 0,
-        'classes' => '',
+        'classes' => ' group-award-eligibility field-group-fieldset',
         'description' => 'Control eligibility for this award.',
       ),
       'formatter' => 'collapsed',
@@ -63,7 +63,7 @@ function award_field_group_info() {
       'label' => 'Area of study',
       'instance_settings' => array(
         'required_fields' => 0,
-        'classes' => '',
+        'classes' => ' group-award-study-area field-group-fieldset',
         'description' => '',
       ),
       'formatter' => 'collapsible',
@@ -89,7 +89,7 @@ function award_field_group_info() {
       'label' => 'Award Tags',
       'instance_settings' => array(
         'required_fields' => 1,
-        'classes' => '',
+        'classes' => ' group-award-tags field-group-fieldset',
         'description' => 'These tags and categories are used to display awards and link them to programs and feature profiles.',
       ),
       'formatter' => 'collapsible',
