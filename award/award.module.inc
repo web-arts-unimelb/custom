@@ -8,7 +8,7 @@
  */
 function award_form_alter(&$form, &$form_state, $form_id) {
   // The views blocks whose exposed forms need modification.
-  $views = array('views-exposed-form-awards-block-2', 'views-exposed-form-awards-block-3', 'views-exposed-form-awards-block-5');
+  $views = array('views-exposed-form-awards-block-2', 'views-exposed-form-awards-block-3', 'views-exposed-form-awards-block-4', 'views-exposed-form-awards-block-5');
   
   if ($form_id == 'views_exposed_form' && !empty($form['#id']) && in_array($form['#id'], $views)) {
     // Make the select list of study areas a bit smaller.
@@ -31,6 +31,19 @@ function award_form_alter(&$form, &$form_state, $form_id) {
 				$form_state['input']['field_award_type_value_1'] = 'scholarship';
 			}
 	 	}
+		else if($form['#id'] == 'views-exposed-form-awards-block-4')
+		{
+			// Advance search scholarship block
+
+      // Reset if select Any in study area filter
+      _reset_study_area_filter($form_state);
+
+      // Set default award type search to scholarship
+      if(empty($_GET['field_award_type_value']))
+      {
+        $form_state['input']['field_award_type_value'] = 'scholarship';
+      }
+		}
 	 	else if($form['#id'] == 'views-exposed-form-awards-block-7')
 	 	{
 	 		// Normal prize search
@@ -175,8 +188,9 @@ function unimelb_preprocess_views_exposed_form(&$vars, $hook)
 {
 	if(
 		$vars['form']['#id'] == 'views-exposed-form-awards-page-5' or
+		$vars['form']['#id'] == 'views-exposed-form-awards-block-4' or
 		$vars['form']['#id'] == 'views-exposed-form-awards-block-5' or
-		$vars['form']['#id'] == 'views-exposed-form-awards-block-2'
+		$vars['form']['#id'] == 'views-exposed-form-awards-block-2' 
 	) 
 	{
 		foreach($vars['widgets'] as $id => &$widget) 
