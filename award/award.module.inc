@@ -13,8 +13,11 @@ function award_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'views_exposed_form' && !empty($form['#id']) && in_array($form['#id'], $views)) {
     // Make the select list of study areas a bit smaller.
     $form['field_award_study_area_tid']['#size'] = 4;
+
+		// Change the keyword search <input title="" > 
+		$form['keys']['#attributes']['title'] = t('Enter the full word you wish to search for');
   }
-  
+ 
   // Set default search term in award type filter
   if(isset($form['#id']))
   {
